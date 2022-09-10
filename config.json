@@ -1,6 +1,6 @@
 
 {  
-  "token": "token bot inja bezarid",
+  "token": "",
   "prefix": "!",
   "activity": "/help | Tickets",
   "type": "LISTENING",
