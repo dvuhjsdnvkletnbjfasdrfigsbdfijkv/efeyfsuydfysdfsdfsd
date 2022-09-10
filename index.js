@@ -26,10 +26,10 @@ client.on("ready" , () => {
             client.user.setStatus('online')
         }, 1000)
         setTimeout(() => {
-            client.user.setStatus('dnd')
+            client.user.setStatus('idle')
         }, 2000)
         setTimeout(() => {
-            client.user.setStatus('idle')
+            client.user.setStatus('dnd')
         }, 3000)
     }, 3000);
 })

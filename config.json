@@ -2,11 +2,11 @@
 {  
   "token": "",
   "prefix": "!",
-  "activity": "Beta V6",
+  "activity": "/help | Tickets",
   "type": "LISTENING",
   "status": "Sashazox",
   
-  "COMMENT": "Only enable hostingweb if you are using replit!",
+  "COMMENT": "faqat baraye online negah dashtan baraye web hosting in gozinaro roye true bezarid",
   "hostingweb": true,
   
   "developers": ["960568805791240212"],
@@ -14,16 +14,16 @@
 
 
   "color": {
-    "main"   : "#3903ff",
-    "error"  : "#ff5f8e",
-    "success": "#99ff9c",
+    "main"   : "#7303ff",
+    "error"  : "#ff0000",
+    "success": "#00ff19",
 
-    "red"   : "#ff5a48",
-    "orange": "#ffca4d",
-    "yellow": "#ffcc5c",
-    "green" : "#74ff89",
-    "purple": "#7d5eff",
-    "pink"  : "#ff88d2",
+    "red"   : "#ff0000",
+    "orange": "#ff5a00",
+    "yellow": "#ffca00",
+    "green" : "#00ff05",
+    "purple": "#a324ff",
+    "pink"  : "#ff00fb",
     "grey"  : "#4b4b4b",
     "white" : "#ffffff"
   }
