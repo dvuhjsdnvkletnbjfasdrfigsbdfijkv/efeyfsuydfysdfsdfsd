@@ -69,7 +69,7 @@ await client.application.commands.set(arrayOfSlashCommands).then((slashCommandsD
 
     client.on('guildCreate', async (guild) => {
    await client.application.commands.set(arrayOfSlashCommands);
-   return console.log(`بات به سرور  ${guild.name} اینوایت شد و اسلش کامند ها شروع به ساختن شدن اگه بات پرم کافی داشته باشه`)
+   return console.log(`⚡ I was Invited to ${guild.name}! I will now start creating the Slash Commands (If i have perms)`)
     })
 // Mongoose
   /*

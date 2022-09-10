@@ -67,7 +67,7 @@ const role = db.get(`adminrole_${interaction.guild.id}${s}`);
 
      
       
-      interaction.followUp({ content: `${client.emoji.correct} ست شد **${channel.name} (${channel.id}) به عنوان چنل تیکت.**` })
+      interaction.followUp({ content: `${client.emoji.correct} ست شد **${channel.name} (${channel.id}) as the Ticket-Log channel!**` })
 
       db.set(`ticketlogs_${interaction.guild.id}`, channel)
       client.channels.cache.get(channel.id).send({ embeds: [panel] })

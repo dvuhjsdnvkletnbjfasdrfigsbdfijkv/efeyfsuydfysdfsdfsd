@@ -9,11 +9,10 @@ module.exports = {
 
       const emb = new MessageEmbed()
       .setColor(client.config.color.main)
-      .setTitle(`${client.user.username}`)
-      .setDescription(`بعد از اینوایت دادن بات از کامند **/help** استفاده کنید برای مشاهده کامند های بات.`)
+      .setTitle(`Invite ${client.user.username}`)
+      .setDescription(`Once you invite me run **/help** to get started managing tickets the right way for your guild!`)
       .setThumbnail(client.user.displayAvatarURL({ dynamic : true }))
-      .setImage(`https://cdn.discordapp.com/attachments/1001283718356418660/1017242884442959972/Apokolips_Ticket.gif`) 
-      .setFooter(`Apokolips TM`) 
+      .setFooter(`Made With 💖 By Sashazox`) 
 
       const row = new MessageActionRow()
 			.addComponents(
