@@ -20,6 +20,20 @@ client.config = require("./config.json");
 client.emoji = require(`./emoji.json`)
 client.cluster = new Cluster.Client(client)
 
+client.on("ready" , () => {
+    setInterval(() => {
+        setTimeout(() => {
+            client.user.setStatus('online')
+        }, 1000)
+        setTimeout(() => {
+            client.user.setStatus('idle')
+        }, 2000)
+        setTimeout(() => {
+            client.user.setStatus('dnd')
+        }, 3000)
+    }, 3000);
+})
+
 require("./handler")(client);
 discordModals(client);
 

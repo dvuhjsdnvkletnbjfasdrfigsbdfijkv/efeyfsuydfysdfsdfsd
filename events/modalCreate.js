@@ -24,7 +24,7 @@ client.on('modalSubmit', async (modal) => {
     
         const tcopener = modal.guild.members.cache.get(opener.id)
         const closed = new MessageEmbed()
-    .setTitle(`𝐊 Δ 𝐑 𝐌 Δ`)
+    .setTitle(`تیکت بسته شد`)
           .setColor(`WHITE`)
           .addField(`**تیکت باز شده توسط:**`, `\`\`\`\n${tcopener.user.tag} (${tcopener.user.id})\n\`\`\``)
     .addField(`**بسته شده توسط:**`, `\`\`\`\n${modal.user.tag} (${modal.user.id})\n\`\`\``)

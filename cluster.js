@@ -6,7 +6,7 @@ const shardsPerCluster = 1;
 const manager = new Cluster.Manager(`./index.js`, {
     totalShards: totalShards, // Use 'auto' if u want it to be Auto.
     shardsPerClusters: shardsPerCluster, 
-    mode: 'process', 
+    mode: 'process' , 
     token: process.env.token,
     respawn: true, 
     usev13: true,

@@ -2,28 +2,24 @@ const { Client, CommandInteraction, MessageEmbed, MessageActionRow, MessageButto
 
 module.exports = {
     name: "discord",
-    description: "KARMA PORN | KARMA GIF invite link",
+    description: "ساپورت سرور",
     type: 'CHAT_INPUT',
     run: async (client, interaction, args) => {
       let msg = await interaction.followUp(`Loading..`);
 
       const emb = new MessageEmbed()
       .setColor(client.config.color.main)
-      .setTitle(`𝐊 Δ 𝐑 𝐌 Δ Ticket`)
-      .setDescription(`**𝐊 Δ 𝐑 𝐌 Δ: https://discord.gg/C7sxCgh7**`)
-      .setThumbnail({iconeURL: ('https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif')})
-      .setImage(`https://cdn.discordapp.com/attachments/987778608401621002/1018206528169320569/20220910_213822.gif`) 
-      .setFooter(`𝐊 Δ 𝐑 𝐌 Δ`) 
+      .setTitle(`Join ${client.user.username} support server`)
+      .setDescription(`**[support server https://discord.gg/x6TZyyxaTq]()**`)
+      .setThumbnail(client.user.displayAvatarURL({ dynamic : true }))
+      .setImage(`https://cdn.discordapp.com/attachments/1001283718356418660/1017242884442959972/Apokolips_Ticket.gif`) 
+      .setFooter(`Apokolips TM`) 
 
       const row = new MessageActionRow()
 			.addComponents(
 				new MessageButton()
-				.setURL(`https://discord.gg/7PezfvX6VC`)
-				.setLabel('𝐊 Δ 𝐑 𝐌 Δ Porn')
-				.setStyle('LINK'),
-        new MessageButton()
-				.setURL(`https://discord.gg/zGD7nBg2Sq`)
-				.setLabel('𝐊 Δ 𝐑 𝐌 Δ GIF')
+				.setURL(`https://discord.gg/x6TZyyxaTq`)
+				.setLabel('Apokolips TM')
 				.setStyle('LINK'),
 			);
       

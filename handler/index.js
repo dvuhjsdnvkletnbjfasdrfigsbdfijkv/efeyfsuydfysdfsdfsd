@@ -43,14 +43,14 @@ module.exports = async (client) => {
       if(message.content.startsWith(`${client.config.prefix}deploy`)) {
         try {
         if(!message.member.permissions.has("MANAGE_GUILD")) {
-        return message.reply(`**shoma nmitonin az command \`Deploy\` estefade konid**\n> ** \`${arrayOfSlashCommands.length}\`| ${client.user.username}**`);
+        return message.reply(`**You cannot use this \`Deploy\` command!**\n> **There are \`${arrayOfSlashCommands.length} Slash-Commands\` for ${client.user.username}!**`);
       }
       let themsg = await message.reply(`**Attempting to set the GUILD Slash Commands in \`${message.guild.name}\`...**`)
 await client.application.commands.set(arrayOfSlashCommands).then((slashCommandsData) => {
       themsg.edit(`${client.emoji.correct} **Loading \`${slashCommandsData.size} Slash-Commands\`** (\`${slashCommandsData.map(d => d.options).flat().length} Subcommands\`) in ${message.guild.name}`);
         }).catch((e) => {
           console.log(e)
-          themsg.edit(`**bot nmitone slash command haro dakhel ${message.guild.name} load kone**\n\n**ehtemalan bot perm kafi baraye create slash command nadare. bot ro ba in link dobare invite konid:**\n> https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands`)
+          themsg.edit(`**I Could not load the Slash Commands for ${message.guild.name}**\n\n**I Must be missing permissions to Create Slash-Commands! Invite me when this link:**\n> https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands`)
         });
         }
      catch (e) {
@@ -71,5 +71,13 @@ await client.application.commands.set(arrayOfSlashCommands).then((slashCommandsD
    await client.application.commands.set(arrayOfSlashCommands);
    return console.log(`بات به سرور  ${guild.name} اینوایت شد و اسلش کامند ها شروع به ساختن شدن اگه بات پرم کافی داشته باشه`)
     })
+// Mongoose
+  /*
+  mongoose.connect(process.env.mongooseConnectionString, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+  }).then(console.log(`🏆 Loading MONGO database`))
+  */
+  
 }
 
