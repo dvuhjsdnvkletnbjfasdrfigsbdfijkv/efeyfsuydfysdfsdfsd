@@ -1,0 +1,30 @@
+
+{  
+  "token": "token bot inja bezarid",
+  "prefix": "!",
+  "activity": "/help | Tickets",
+  "type": "LISTENING",
+  "status": "Sashazox",
+  
+  "COMMENT": "faqat baraye online negah dashtan baraye web hosting in gozinaro roye true bezarid",
+  "hostingweb": false,
+  
+  "developers": ["960568805791240212","836224044947734569","761826519705714699"],
+
+
+
+  "color": {
+    "main"   : "#7303ff",
+    "error"  : "#ff0000",
+    "success": "#00ff19",
+
+    "red"   : "#ff0000",
+    "orange": "#ff5a00",
+    "yellow": "#ffca00",
+    "green" : "#00ff05",
+    "purple": "#a324ff",
+    "pink"  : "#ff00fb",
+    "grey"  : "#4b4b4b",
+    "white" : "#ffffff"
+  }
+}
