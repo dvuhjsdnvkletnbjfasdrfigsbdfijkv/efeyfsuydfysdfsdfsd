@@ -2,23 +2,24 @@ const { Client, CommandInteraction, MessageEmbed, MessageActionRow, MessageButto
 
 module.exports = {
     name: "discord",
-    description: "join Apokolips TM discord <3",
+    description: "ساپورت سرور",
     type: 'CHAT_INPUT',
     run: async (client, interaction, args) => {
       let msg = await interaction.followUp(`Loading..`);
 
       const emb = new MessageEmbed()
       .setColor(client.config.color.main)
-      .setTitle(`Join ${client.user.username} discord by clicking the link down below`)
-      .setDescription(`**[join Apokolips Discord https://discord.gg/x6TZyyxaTq]()**`)
+      .setTitle(`Join ${client.user.username} support server`)
+      .setDescription(`**[support server https://discord.gg/x6TZyyxaTq]()**`)
       .setThumbnail(client.user.displayAvatarURL({ dynamic : true }))
-      .setFooter(`Made With 💖 By Sashazox`) 
+      .setImage(`https://cdn.discordapp.com/attachments/1001283718356418660/1017242884442959972/Apokolips_Ticket.gif`) 
+      .setFooter(`Apokolips TM`) 
 
       const row = new MessageActionRow()
 			.addComponents(
 				new MessageButton()
 				.setURL(`https://discord.gg/x6TZyyxaTq`)
-				.setLabel('Apokolips TM Discord')
+				.setLabel('Apokolips TM')
 				.setStyle('LINK'),
 			);
       

@@ -6,11 +6,11 @@
      run: async (client, interaction, args) => {
        let msg = await interaction.followUp({ content: `Fetching..` })
 
-       if (!client.config.developers.includes(interaction.user.id)) return msg.edit({ content: `🔐 **Only sashazox can use this command!**`, ephemeral: true})
+       if (!client.config.developers.includes(interaction.user.id)) return msg.edit({ content: `شما نمیتونین از این کامند استفاده کنید.**`, ephemeral: true})
 
        let array = []
        client.guilds.cache.forEach(async(x) => {
-           array.push(`> **Server Name: ${x.name} | Members: ${x.memberCount}**`);
+           array.push(`> **اسم سرور: ${x.name} | تعداد ممبر: ${x.memberCount}**`);
            return msg.edit(`${array.join("\n")}`)
        });
      },

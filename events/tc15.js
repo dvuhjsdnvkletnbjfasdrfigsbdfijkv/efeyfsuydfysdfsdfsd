@@ -26,13 +26,13 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
                        .replace(/{user}/g, interaction.user.username)
                        
         console.log("Ticket Creation - GUILD: "+interaction.guild.name+" | OPENER: "+interaction.user.tag+"".green.dim)
-        if(!interaction.guild.me.permissions.has("MANAGE_CHANNELS")) return interaction.reply({ content: `${client.emoji.wrong} **بات پرم کافی برای ساخت تیکت نداره.**\n> *چک کنید که بات پرم \`MANAGE_CHANNELS\` رو داشته باشه*`, ephemeral: true })
+        if(!interaction.guild.me.permissions.has("MANAGE_CHANNELS")) return interaction.reply({ content: `**بات پرم کافی برای ساخت تیکت نداره.**\n> *چک کنید که بات پرم \`MANAGE_CHANNELS\` رو داشته باشه*`, ephemeral: true })
         var nameer = `${tcname || `ticket-${interaction.user.username}`}`
                 var checkTickets = interaction.guild.channels.cache.find(c => c.name == nameer.split(' ').join('-').toLocaleLowerCase());
                 if (checkTickets) {
                   const embed = new MessageEmbed()
         .setColor(client.config.color.purple)
-        .setTitle(`${client.emoji.wrong} شما یک تیکت باز دارید.`)
+        .setTitle(`شما یک تیکت باز دارید.`)
         .setDescription(`***تیکت شما: ${checkTickets}. لطفا اول این تیکت رو ببندید.***`)
         .setFooter(`Apokolips TM`, interaction.guild.iconURL())
                    return interaction.reply({ embeds: [embed], ephemeral: true})
@@ -63,11 +63,11 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
                     parent: cat,
                     topic: `📨 Ticket for: ${interaction.user.tag} (${interaction.user.id})`
                 }).catch(() => {
-          interaction.editReply({ content: `${client.emoji.wrong} **ساخت تیکت شما به مشکل خورد.**\n> *ErrCode: \`hHa_8\`*`, components: [reasons], ephemeral: true })
+          interaction.editReply({ content: `**ساخت تیکت شما به مشکل خورد.**\n> *ErrCode: \`hHa_8\`*`, components: [reasons], ephemeral: true })
                 }).then(async function(channel) {
                   db.set(`Ticketopener_${channel.id}`, interaction.user);
                 await wait(1000)
-                await interaction.editReply({ content: `${client.emoji.correct} **تیکت شما ساخته شد ${channel}**`, ephemeral: true })
+                await interaction.editReply({ content: `**تیکت شما ساخته شد ${channel}**`, ephemeral: true })
                   
         const embed = new MessageEmbed()
         .setColor(client.config.color.yellow)
@@ -99,10 +99,10 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
 			      .setCustomId('tck_options')
 			      .setPlaceholder('برای انتخاب گزینه کلیک کنید')
 			      .addOptions([
-              { label: `ᴋᴀʀᴍᴀ | ᴅᴇʟᴇᴛᴇ ᴛɪᴄᴋᴇᴛ`, description: `اگه کارتون تموم شده تیکت رو دیلیت کنید`, value: `delete_ticket${s}`, emoji: `🗑️`},
-              { label: `ᴋᴀʀᴍᴀ | ʟᴏᴄᴋ ᴛɪᴄᴋᴇᴛ`, description: `تیکت برای یوسر معمولی هاید میشه`, value: `close_ticket${s}`, emoji: `🔒`},
-              { label: `ᴋᴀʀᴍᴀ | ᴘɪɴ ᴛɪᴄᴋᴇᴛ`, description: `پین کردن تیکت های مهم`, value: `pin_ticket${s}`, emoji: `📌`},
-              { label: `ᴋᴀʀᴍᴀ | ᴀᴄᴄᴇᴘᴛ ᴛɪᴄᴋᴇᴛ`, description: `تیکت برای شما اکسپت میشه`, value: `claim_ticket${s}`, emoji: `✅` },
+              { label: `ᴀᴘᴏᴋᴏʟɪᴘꜱ | ᴅᴇʟᴇᴛᴇ ᴛɪᴄᴋᴇᴛ`, description: `اگه کارتون تموم شده تیکت رو دیلیت کنید`, value: `delete_ticket${s}`, emoji: `🗑️`},
+              { label: `ᴀᴘᴏᴋᴏʟɪᴘꜱ | ʟᴏᴄᴋ ᴛɪᴄᴋᴇᴛ`, description: `تیکت برای یوسر معمولی هاید میشه`, value: `close_ticket${s}`, emoji: `🔒`},
+              { label: `ᴀᴘᴏᴋᴏʟɪᴘꜱ | ᴘɪɴ ᴛɪᴄᴋᴇᴛ`, description: `پین کردن تیکت های مهم`, value: `pin_ticket${s}`, emoji: `📌`},
+              { label: `ᴀᴘᴏᴋᴏʟɪᴘꜱ | ᴀᴄᴄᴇᴘᴛ ᴛɪᴄᴋᴇᴛ`, description: `تیکت برای شما اکسپت میشه`, value: `claim_ticket${s}`, emoji: `✅` },
               
             ]),
           ])
@@ -142,7 +142,7 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
 
         interaction.channel.send({ embeds: [embed] })
 
-        tcopener.send({ content: `**تیکت شما توسط \`${interaction.user.tag}\` قفل شد.**`})
+        //tcopener.send({ content: `**تیکت شما توسط \`${interaction.user.tag}\` قفل شد.**`})
 
       }  else if (interaction.values == `pin_ticket${s}`) {
         const opener = db.get(`Ticketopener_${interaction.channel.id}`)
@@ -208,7 +208,7 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
         const attachment = await discordTranscripts.createTranscript(interaction.channel);
         
 
-        interaction.reply({ content: `**${client.emoji.correct} Transcript of: \`${interaction.channel.name}\`**`, files: [attachment] , ephemeral: true})
+        interaction.reply({ content: `**Transcript of: \`${interaction.channel.name}\`**`, files: [attachment] , ephemeral: true})
       } else if (interaction.values == `claim_ticket${s}`) {
         const claimed = db.get(`claimed_${interaction.channel.id}`);
         const user = db.get(`Ticketopener_${interaction.channel.id}`);
@@ -242,7 +242,7 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
 
         const embed2 = new MessageEmbed()
         .setColor(client.config.color.main)
-        .setAuthor(`${interaction.user.tag} 𝐊 Δ 𝐑 𝐌 Δ Staff`, interaction.user.displayAvatarURL(), `https://discord.gg/x6TZyyxaTq`)
+        .setAuthor(`${interaction.user.tag} ᴀᴘᴏᴋᴏʟɪᴘꜱ ꜱᴛᴀꜰꜰ`, interaction.user.displayAvatarURL(), `https://discord.gg/x6TZyyxaTq`)
         .setDescription(`> _**${interaction.user.username}** این تیکت رو اکسپت کرد._`)
         .setFooter(`ارور: ${interaction.guild.shardId}`)
 

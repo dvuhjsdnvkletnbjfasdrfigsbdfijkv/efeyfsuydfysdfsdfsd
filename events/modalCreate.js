@@ -15,7 +15,7 @@ client.on('modalSubmit', async (modal) => {
         .setColor(client.config.color.purple)
         .setTitle(`درحال بستن تیکت...`)
         .setDescription(`*...تیکت تا 5 ثانیه دیگر بسته میشود*`)
-        .setFooter(`Action tavasot ${modal.user.username}\n🔷 On Shard: ${modal.guild.shardId}`, modal.guild.iconURL())
+        .setFooter(`Action tavasot ${modal.user.username}\nارور: ${modal.guild.shardId}`, modal.guild.iconURL())
 
         modal.reply({ embeds: [embed] })
             setTimeout(() => {

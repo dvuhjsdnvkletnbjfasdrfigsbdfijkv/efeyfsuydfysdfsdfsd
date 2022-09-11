@@ -17,6 +17,6 @@ module.exports = {
     run: async (client, interaction, args) => {
 
 
-      interaction.followUp({ content: `I'm currently managing **${client.guilds.cache.size}** guilds, watching **${client.users.cache.size}** members & I'm currently on shard ** ${interaction.guild.shardId}**` })
+      interaction.followUp({ content: `تعداد سرور های درحال منیج: **${client.guilds.cache.size}** , تعداد یوزر ها: **${client.users.cache.size}** & ارورها: ** ${interaction.guild.shardId}**` })
     }
 }
