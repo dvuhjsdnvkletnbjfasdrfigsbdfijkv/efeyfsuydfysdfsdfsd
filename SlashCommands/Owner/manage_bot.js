@@ -18,6 +18,7 @@ module.exports = {
     const control = new Discord.MessageEmbed()
       .setColor(client.config.color.main)
       .setAuthor(`${client.user.username} | Bot-Control-Panel`, client.user.displayAvatarURL())
+      .setImage(`https://cdn.discordapp.com/attachments/987778608401621002/1018206528169320569/20220910_213822.gif`)
       .setDescription(`**Bot-File-Path:**
 \`\`\`yml
 ${process.cwd()}

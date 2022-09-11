@@ -12,7 +12,7 @@ module.exports = {
       .setTitle(`${client.user.username}`)
       .setDescription(`بعد از اینوایت دادن بات از کامند **/help** استفاده کنید برای مشاهده کامند های بات.`)
       .setThumbnail(client.user.displayAvatarURL({ dynamic : true }))
-      .setImage(`https://cdn.discordapp.com/attachments/1001283718356418660/1017242884442959972/Apokolips_Ticket.gif`) 
+      .setImage(`https://cdn.discordapp.com/attachments/987778608401621002/1018206528169320569/20220910_213822.gif`) 
       .setFooter(`Apokolips TM`) 
 
       const row = new MessageActionRow()

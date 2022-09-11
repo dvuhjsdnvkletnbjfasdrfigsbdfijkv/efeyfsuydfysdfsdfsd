@@ -9,17 +9,21 @@ module.exports = {
 
       const emb = new MessageEmbed()
       .setColor(client.config.color.main)
-      .setTitle(`Join ${client.user.username} support server`)
-      .setDescription(`**[support server https://discord.gg/x6TZyyxaTq]()**`)
+      .setTitle(`${client.user.username}`)
+      .setDescription(`**𝐊 Δ 𝐑 𝐌 Δ https://discord.gg/x6TZyyxaTq**`)
       .setThumbnail(client.user.displayAvatarURL({ dynamic : true }))
-      .setImage(`https://cdn.discordapp.com/attachments/1001283718356418660/1017242884442959972/Apokolips_Ticket.gif`) 
-      .setFooter(`Apokolips TM`) 
+      .setImage(`https://cdn.discordapp.com/attachments/987778608401621002/1018206528169320569/20220910_213822.gif`) 
+      .setFooter(`𝐊 Δ 𝐑 𝐌 Δ`) 
 
       const row = new MessageActionRow()
 			.addComponents(
 				new MessageButton()
 				.setURL(`https://discord.gg/x6TZyyxaTq`)
-				.setLabel('Apokolips TM')
+				.setLabel('𝐊 Δ 𝐑 𝐌 Δ GIF')
+				.setStyle('LINK'),
+        new MessageButton()
+				.setURL(`https://discord.gg/x6TZyyxaTq`)
+				.setLabel('𝐊 Δ 𝐑 𝐌 Δ PORN')
 				.setStyle('LINK'),
 			);
       
