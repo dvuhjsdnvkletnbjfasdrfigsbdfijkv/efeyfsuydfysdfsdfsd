@@ -24,7 +24,7 @@ module.exports = {
         .addField("`allservers`", "*esm server hayi ke bot dakheleshon hast*")
         .addField("`manage_bot`", "*Manage kardan bot, Change dadan esme bot, change dadan prof bot, shutdown kardan bot*")
         .setImage(`https://cdn.discordapp.com/attachments/987778608401621002/1018206528169320569/20220910_213822.gif`) 
-      .setFooter({name:`𝐊 Δ 𝐑 𝐌 Δ`, iconURL: ('https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif')})
+      .setFooter({text:`𝐊 Δ 𝐑 𝐌 Δ`, iconURL: ('https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif')})
       return interaction.followUp({ embeds: [embed] })
     },
 };
