@@ -121,14 +121,21 @@ module.exports = {
       const embed = new MessageEmbed()
       .setColor(client.config.color.main)
       .setTitle(`تیکت سیستم ست شد`)
-        .setDescription(`تیکت سیستم شما ست شد برای ست کردن لاگ ها از کامند \`/ticket-logs\` استفاده کنید.`)
-      .addField(`تیکت سیستم ست شده:`, `**${s}. Ticket-System**`)
-      .addField(`تیکت چنل:`, `**${channel} (${channel.id})**`)
-      .addField(`تیکت کتجوری:`, `**${category || `_\` کتجوری ست نشده \`_`}**`)
-      .addField(`ادمین رول:`, `**${role} (${role.id})**`)
-        .addField(`اسم چنل های تیکت`, `\`${ticketname}\` (*از اسم \`{user}\` شخصی که تیکت رو باز کرده به عنوان اسم چنل تیکت استفاده میشه *)`)
-        .addField(`تیکت مسیج (Panel Embed)`, `${message || `Open a ticket for ${interaction.guild.name}`}`)
-      .addField(`تیکت مسیج (On Open)`, msg.split("+n+").join("\n"))
+      .setDescription(`
+      \`\`\`diff
+      -ticket system shoma set shod, baraye set kardan log ha az command /ticket-logs estefade konid.
+      \`\`\`
+      \`\`\`bash
+      + Ticket system set shod: ${s}. Ticket-System
+      + Ticket Channel set shode: ${channel} (${channel.id})
+      + Ticket Category:, **${category || `_\` Ticket Category set nashode \`_`}
+      + Admin Role (Ticket Responder): ${role} (${role.id}
+      + esm channel haye ticket: agar shoma ticket channel sabet entekhab nakarde bashid bot be sorat khodkar user kasi ke ticket baz karde ro mizare
+      baraye name channel (mesal: agar user sashazox ticket baz karde bashe name channel mishe ticket-sashazox)
+      + Ticket Message (text roye panel embed): ${message || `Open a ticket for ${interaction.guild.name}`}
+      + Ticket Message (text embed dakhel ticket baz shode): msg.split("+n+").join("\n")
+      \`\`\`
+      `)
       .setThumbnail(`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)
       .setImage(`https://cdn.discordapp.com/attachments/987778608401621002/1018206528169320569/20220910_213822.gif`)
       .setFooter({text: `𝐊 Δ 𝐑 𝐌 Δ`, iconURL: (`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})

@@ -62,7 +62,11 @@ const role = db.get(`adminrole_${interaction.guild.id}${s}`);
       const panel = new MessageEmbed()
       .setColor(client.config.color.main)
       .setTitle(`تیکت لاگ برای \` ${s}. تیکت سیستم \``)
-      .setDescription(`این چنل برای لاگ تیکت ها ست شد.`)
+      .setDescription(`
+\`\`\`bash
+'Ticket log baraye in channel set shod'
+\`\`\`
+`)
       .setThumbnail(`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)
       .setImage(`https://cdn.discordapp.com/attachments/987778608401621002/1018206528169320569/20220910_213822.gif`)
       .setFooter({text: `𝐊 Δ 𝐑 𝐌 Δ`, iconURL: (`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
