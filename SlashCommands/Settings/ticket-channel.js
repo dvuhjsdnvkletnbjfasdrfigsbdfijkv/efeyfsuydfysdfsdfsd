@@ -108,7 +108,9 @@ module.exports = {
       .setColor(client.config.color.main)
       .setTitle(`Apokolips TM`)
       .setDescription(`${message || `Open a ticket for ${interaction.guild.name}`}`)
-      .setFooter(`برای باز کردن تیکت روی دکمه زیر کلیک کنید.`, interaction.guild.iconURL())
+      .setThumbnail(`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)
+      .setImage(`https://cdn.discordapp.com/attachments/987778608401621002/1018206528169320569/20220910_213822.gif`)
+      .setFooter({text: `برای باز کردن تیکت روی دکمه زیر کلیک کنید.`, iconURL: (`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
 
       const button = new MessageActionRow()
       .addComponents([
@@ -132,14 +134,14 @@ module.exports = {
 'Ticket Channel set shode:' channel id (${channel.id})
 \`\`\`
 \`\`\`bash
-'Ticket Category:' **${category || `_\ Ticket Category set nashode \_`}
+'Ticket Category:' ${category || `_\ Ticket Category set nashode \_`}
 \`\`\`
 \`\`\`bash
 'Admin Role (Ticket Responder):' role id ${role.id}
 \`\`\`
 \`\`\`diff
 -esm channel haye ticket: agar shoma ticket channel sabet entekhab nakarde bashid bot be sorat khodkar user kasi ke ticket baz karde ro mizare
-baraye name channel (mesal: agar user sashazox ticket baz karde bashe name channel mishe ticket-sashazox)
+-baraye name channel (mesal: agar user sashazox ticket baz karde bashe name channel mishe ticket-sashazox)
 \`\`\`
 \`\`\`bash
 'Ticket Message (text roye panel embed):' ${message || `Open a ticket for ${interaction.guild.name}`}

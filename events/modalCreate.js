@@ -30,6 +30,7 @@ client.on('modalSubmit', async (modal) => {
           .addField(`**تیکت باز شده توسط:**`, `\`\`\`\n${tcopener.user.tag} (${tcopener.user.id})\n\`\`\``)
     .addField(`**بسته شده توسط:**`, `\`\`\`\n${modal.user.tag} (${modal.user.id})\n\`\`\``)
     .addField(`**دلیل بستن تیکت:**`, `${Formatters.codeBlock('markdown', firstResponse) || "`دلیلی نوشته نشده`"}`)
+    .setThumbnail(`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)
     .setFooter({text: `بک آپ تیکت در فایل بالا قرار دارد.`, iconURL: (`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
         
 
