@@ -1,8 +1,8 @@
 const { Client, CommandInteraction, MessageEmbed, MessageActionRow, MessageButton } = require("discord.js");
 
 module.exports = {
-    name: "discord",
-    description: "ساپورت سرور",
+    name: "karma_gif",
+    description: "𝐊 Δ 𝐑 𝐌 Δ Gif",
     type: 'CHAT_INPUT',
     run: async (client, interaction, args) => {
       let msg = await interaction.followUp(`Loading..`);
@@ -19,7 +19,7 @@ module.exports = {
 			.addComponents(
 				new MessageButton()
 				.setURL(`https://discord.gg/x6TZyyxaTq`)
-				.setLabel('Apokolips TM')
+				.setLabel('𝐊 Δ 𝐑 𝐌 Δ GIF')
 				.setStyle('LINK'),
 			);
       
