@@ -126,14 +126,26 @@ module.exports = {
 -ticket system shoma set shod, baraye set kardan log ha az command /ticket-logs estefade konid.
 \`\`\`
 \`\`\`bash
-+ Ticket system set shod: ${s}. Ticket-System
-+ Ticket Channel set shode: ${channel} (${channel.id})
-+ Ticket Category:, **${category || `_\` Ticket Category set nashode \`_`}
-+ Admin Role (Ticket Responder): ${role} (${role.id}
-+ esm channel haye ticket: agar shoma ticket channel sabet entekhab nakarde bashid bot be sorat khodkar user kasi ke ticket baz karde ro mizare
-baraye name channel (mesal: agar user sashazox ticket baz karde bashe name channel mishe ticket-sashazox)
+'Ticket system set shod:' ${s}. Ticket-System
+\`\`\`
+\`\`\`bash
+'Ticket Channel set shode:' ${channel} (${channel.id})
+\`\`\`
+\`\`\`bash
+'Ticket Category:' **${category || `_\` Ticket Category set nashode \`_`}
+\`\`\`
+\`\`\`bash
+'Admin Role (Ticket Responder):' ${role} (${role.id}
+\`\`\`
+\`\`\`bash
+'esm channel haye ticket: agar shoma ticket channel sabet entekhab nakarde bashid bot be sorat khodkar user kasi ke ticket baz karde ro mizare
+baraye name channel (mesal: agar user sashazox ticket baz karde bashe name channel mishe ticket-sashazox)'
+\`\`\`
+\`\`\`bash
 + Ticket Message (text roye panel embed): ${message || `Open a ticket for ${interaction.guild.name}`}
-+ Ticket Message (text embed dakhel ticket baz shode): msg.split("+n+").join("\n")
+\`\`\`
+\`\`\`bash
+'Ticket Message (text embed dakhel ticket baz shode):' ${msg.split("+n+").join("\n")}
 \`\`\`
 `)
       .setThumbnail(`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)
