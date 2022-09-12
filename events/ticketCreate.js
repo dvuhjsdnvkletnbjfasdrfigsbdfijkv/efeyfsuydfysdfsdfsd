@@ -71,7 +71,7 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
                   
         const embed = new MessageEmbed()
         .setColor(client.config.color.yellow)
-        .setAuthor(`Ticket for: ${interaction.user.tag}`, interaction.user.displayAvatarURL(),)
+        .setAuthor(`Ticket for: ${interaction.user.tag}`, interaction.user.displayAvatarURL(), `https://sashazox.ml/`)
         .setDescription(`${message || `**تیکت شما باز شد لطفا صبور باشید تا رسیدگی شود.**`}`)
         .setThumbnail({ iconURL: (`https://media.discordapp.net/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
         const embed2 = new MessageEmbed()
@@ -92,7 +92,8 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
           .setStyle(`LINK`)
           .setEmoji(`🔶`)
           .setLabel(`𝐊 Δ 𝐑 𝐌 Δ GIF`)
-          .setURL(`https://discord.gg/x6TZyyxaTq`)
+          .setURL(`https://discord.gg/x6TZyyxaTq`),
+          new MessageButton()
           .setStyle(`LINK`)
           .setEmoji(`🔶`)
           .setLabel(`𝐊 Δ 𝐑 𝐌 Δ PORN`)
