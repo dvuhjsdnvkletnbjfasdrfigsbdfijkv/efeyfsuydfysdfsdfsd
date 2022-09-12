@@ -2,14 +2,14 @@ const { Client, CommandInteraction, MessageEmbed, MessageActionRow, MessageButto
 
 module.exports = {
     name: "karma_gif",
-    description: "𝐊 Δ 𝐑 𝐌 Δ Gif",
+    description: "Link invite 𝐊 Δ 𝐑 𝐌 Δ Gif",
     type: 'CHAT_INPUT',
     run: async (client, interaction, args) => {
       let msg = await interaction.followUp(`Loading..`);
 
       const emb = new MessageEmbed()
       .setColor(client.config.color.main)
-      .setTitle(`Join ${client.user.username} support server`)
+      .setTitle(`𝐊 Δ 𝐑 𝐌 Δ Servers`)
       .setDescription(`**[support server https://discord.gg/x6TZyyxaTq]()**`)
       .setThumbnail(`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)
       .setImage(`https://cdn.discordapp.com/attachments/987778608401621002/1018206528169320569/20220910_213822.gif`) 

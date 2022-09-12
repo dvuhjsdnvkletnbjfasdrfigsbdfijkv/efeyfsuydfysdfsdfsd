@@ -129,6 +129,9 @@ module.exports = {
         .addField(`اسم چنل های تیکت`, `\`${ticketname}\` (*از اسم \`{user}\` شخصی که تیکت رو باز کرده به عنوان اسم چنل تیکت استفاده میشه *)`)
         .addField(`تیکت مسیج (Panel Embed)`, `${message || `Open a ticket for ${interaction.guild.name}`}`)
       .addField(`تیکت مسیج (On Open)`, msg.split("+n+").join("\n"))
+      .setThumbnail(`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)
+      .setImage(`https://cdn.discordapp.com/attachments/987778608401621002/1018206528169320569/20220910_213822.gif`)
+      .setFooter({text: `𝐊 Δ 𝐑 𝐌 Δ`, iconURL: (`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
       
       db.set(`ticketmsg_${interaction.guild.id}${s}`, msg.split("+n+").join("\n"));
       if(category) db.set(`category_${interaction.guild.id}${s}`, category.id)
