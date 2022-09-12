@@ -76,7 +76,7 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
         .setThumbnail(interaction.guild.iconURL())
         const embed2 = new MessageEmbed()
         .setColor(client.config.color.main)
-        .setAuthor(`استف ها به زودی به درخواست شما رسیدگی میکنن.`, `https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)
+        .setAuthor({name: `استف ها به زودی به درخواست شما رسیدگی میکنن.`, iconURL: (`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
         .setDescription(`> *لطفا صبر کنید تا یک استف با رول <@&${role}> تیکت شما رو اکسپت کند*`)
         .setImage(`https://cdn.discordapp.com/attachments/987778608401621002/1018206528169320569/20220910_213822.gif`)
         .setFooter({text:`ارور: ${interaction.guild.shardId}`, iconURL:(`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
