@@ -71,7 +71,7 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
                   
         const embed = new MessageEmbed()
         .setColor(client.config.color.yellow)
-        .setAuthor(`Ticket for: ${interaction.user.tag}`, interaction.user.displayAvatarURL(), `https://sashazox.ml/`)
+        .setAuthor(`Ticket for: ${interaction.user.tag}`, interaction.user.displayAvatarURL(), `https://discord.gg/x6TZyyxaTq`)
         .setDescription(`${message || `**تیکت شما باز شد لطفا صبور باشید تا رسیدگی شود.**`}`)
         .setThumbnail(`https://media.discordapp.net/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)
         const embed2 = new MessageEmbed()

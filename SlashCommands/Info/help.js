@@ -20,9 +20,9 @@ module.exports = {
         .addField("`ticket-setup`", "*Setup kardan ticket system*")
         .addField("`ticket-logs`", "*Setup kardan log system*")
         
-        .addField("\u200b", "**__𝐊 Δ 𝐑 𝐌 Δ Developer Commands:__**")
-        .addField("`allservers`", "*esm server hayi ke bot dakheleshon hast*")
-        .addField("`manage_bot`", "*Manage kardan bot, Change dadan esme bot, change dadan prof bot, shutdown kardan bot*")
+        .addField("> **__𝐊 Δ 𝐑 𝐌 Δ Developer Commands__**")
+        .addField("```elm\nAllservers\nmoshahede esm server hayi ke bot dakheleshon hast\n```")
+        .addField("```elm\nManage_bot\nmanage kardan bot, change dadan esme bot, change dadan prof bot, shutdown kardan bot\n```")
         .setImage(`https://cdn.discordapp.com/attachments/987778608401621002/1018206528169320569/20220910_213822.gif`) 
       .setFooter({text:`𝐊 Δ 𝐑 𝐌 Δ`, iconURL: ('https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif')})
       return interaction.followUp({ embeds: [embed] })

@@ -15,7 +15,7 @@ client.on('modalSubmit', async (modal) => {
         .setColor(client.config.color.purple)
         .setTitle(`درحال بستن تیکت...`)
         .setDescription(`*...تیکت تا 5 ثانیه دیگر بسته میشود*`)
-        .setFooter(`Action tavasot ${modal.user.username}\nارور: ${modal.guild.shardId}`, modal.guild.iconURL())
+        .setFooter({text: `Action tavasot ${modal.user.username}`, iconURL: (`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
 
         modal.reply({ embeds: [embed] })
             setTimeout(() => {
@@ -26,10 +26,11 @@ client.on('modalSubmit', async (modal) => {
         const closed = new MessageEmbed()
     .setTitle(`تیکت بسته شد`)
           .setColor(`WHITE`)
+          .setThumbnail(`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)
           .addField(`**تیکت باز شده توسط:**`, `\`\`\`\n${tcopener.user.tag} (${tcopener.user.id})\n\`\`\``)
     .addField(`**بسته شده توسط:**`, `\`\`\`\n${modal.user.tag} (${modal.user.id})\n\`\`\``)
     .addField(`**دلیل بستن تیکت:**`, `${Formatters.codeBlock('markdown', firstResponse) || "`دلیلی نوشته نشده`"}`)
-    .setFooter(`بک آپ تیکت در فایل بالا قرار دارد.`)
+    .setFooter({text: `بک آپ تیکت در فایل بالا قرار دارد.`, iconURL: (`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
         
 
     //tcopener.send({ embeds: [closed], files: [attachment]}).catch(() => {});

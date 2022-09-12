@@ -1,7 +1,7 @@
 const { Client, CommandInteraction, MessageEmbed, MessageActionRow, MessageButton } = require("discord.js");
 
 module.exports = {
-    name: "discord",
+    name: "karma",
     description: "ساپورت سرور",
     type: 'CHAT_INPUT',
     run: async (client, interaction, args) => {
@@ -11,7 +11,7 @@ module.exports = {
       .setColor(client.config.color.main)
       .setTitle(`${client.user.username}`)
       .setDescription(`**𝐊 Δ 𝐑 𝐌 Δ https://discord.gg/x6TZyyxaTq**`)
-      .setThumbnail({iconURL: (`https://media.discordapp.net/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
+      .setThumbnail(`https://media.discordapp.net/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)
       .setImage(`https://cdn.discordapp.com/attachments/987778608401621002/1018206528169320569/20220910_213822.gif`) 
       .setFooter(`𝐊 Δ 𝐑 𝐌 Δ`) 
 
