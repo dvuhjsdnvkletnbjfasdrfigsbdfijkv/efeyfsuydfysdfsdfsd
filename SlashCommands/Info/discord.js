@@ -9,7 +9,7 @@ module.exports = {
 
       const emb = new MessageEmbed()
       .setColor(client.config.color.main)
-      .setTitle(`𝐊 Δ 𝐑 𝐌 Δ Servers`)
+      .setTitle(`Join ${client.user.username} support server`)
       .setDescription(`**[support server https://discord.gg/x6TZyyxaTq]()**`)
       .setThumbnail(`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)
       .setImage(`https://cdn.discordapp.com/attachments/987778608401621002/1018206528169320569/20220910_213822.gif`) 
