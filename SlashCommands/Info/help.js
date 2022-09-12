@@ -18,7 +18,6 @@ list command haye bot
 -/Stats
 moshahede stats bot
 \`\`\`
-
 \`\`\`diff
 -/Invite
 link invite bot
@@ -47,6 +46,7 @@ moshahede ems server hayi ke bot dakheleshon hast
 manage kardan bot, change dadan esm bot, change dadan prof bot, shutdown kardan bot
 \`\`\`
 `)
+        .setThumbnail(`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)
         .setImage(`https://cdn.discordapp.com/attachments/987778608401621002/1018206528169320569/20220910_213822.gif`) 
       .setFooter({text:`𝐊 Δ 𝐑 𝐌 Δ`, iconURL: ('https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif')})
       return interaction.followUp({ embeds: [embed] })

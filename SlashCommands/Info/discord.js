@@ -1,7 +1,7 @@
 const { Client, CommandInteraction, MessageEmbed, MessageActionRow, MessageButton } = require("discord.js");
 
 module.exports = {
-    name: "karma",
+    name: "discord",
     description: "ساپورت سرور",
     type: 'CHAT_INPUT',
     run: async (client, interaction, args) => {
@@ -9,22 +9,18 @@ module.exports = {
 
       const emb = new MessageEmbed()
       .setColor(client.config.color.main)
-      .setTitle(`${client.user.username}`)
-      .setDescription(`**𝐊 Δ 𝐑 𝐌 Δ https://discord.gg/x6TZyyxaTq**`)
-      .setThumbnail(`https://media.discordapp.net/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)
-      .setImage(`https://cdn.discordapp.com/attachments/987778608401621002/1018206528169320569/20220910_213822.gif`) 
-      .setFooter({text:`𝐊 Δ 𝐑 𝐌 Δ`, iconURL: (`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)}) 
+      .setTitle(`Join ${client.user.username} support server`)
+      .setDescription(`**[support server https://discord.gg/x6TZyyxaTq]()**`)
+      .setThumbnail(client.user.displayAvatarURL({ dynamic : true }))
+      .setImage(`https://cdn.discordapp.com/attachments/1001283718356418660/1017242884442959972/Apokolips_Ticket.gif`) 
+      .setFooter(`Apokolips TM`) 
 
       const row = new MessageActionRow()
 			.addComponents(
 				new MessageButton()
 				.setURL(`https://discord.gg/x6TZyyxaTq`)
-				.setLabel('𝐊 Δ 𝐑 𝐌 Δ GIF')
+				.setLabel('Apokolips TM')
 				.setStyle('LINK'),
-        new MessageButton()
-				.setURL(`https://discord.gg/x6TZyyxaTq`)
-				.setLabel('𝐊 Δ 𝐑 𝐌 Δ PORN')
-				.setStyle('LINK')
 			);
       
       setTimeout(() => {

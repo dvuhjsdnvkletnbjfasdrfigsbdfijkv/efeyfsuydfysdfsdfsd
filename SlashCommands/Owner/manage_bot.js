@@ -39,6 +39,7 @@ ${clientapp.description ? clientapp.description : "About me baraye bot neveshte 
 \`\`\``
           : ""}
 `)
+      .setFooter({text: `𝐊 Δ 𝐑 𝐌 Δ`, iconURL: (`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
       
       interaction.followUp({ embeds: [control], components: [
         new Discord.MessageActionRow()
