@@ -71,9 +71,9 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
                   
         const embed = new MessageEmbed()
         .setColor(client.config.color.yellow)
-        .setAuthor({name: `Ticket for: ${interaction.user.tag}`, iconURL: (`https://media.discordapp.net/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
+        .setAuthor(`Ticket for: ${interaction.user.tag}`, interaction.user.displayAvatarURL(),)
         .setDescription(`${message || `**تیکت شما باز شد لطفا صبور باشید تا رسیدگی شود.**`}`)
-        .setThumbnail(interaction.guild.iconURL())
+        .setThumbnail({ iconURL: (`https://media.discordapp.net/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
         const embed2 = new MessageEmbed()
         .setColor(client.config.color.main)
         .setAuthor(`استف ها به زودی به درخواست شما رسیدگی میکنن.`, `https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)
