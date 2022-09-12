@@ -34,7 +34,7 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
         .setColor(client.config.color.purple)
         .setTitle(`شما یک تیکت باز دارید.`)
         .setDescription(`***تیکت شما: ${checkTickets}. لطفا اول این تیکت رو ببندید.***`)
-        .setFooter(`Apokolips TM`, interaction.guild.iconURL())
+        .setFooter({text: `𝐊 Δ 𝐑 𝐌 Δ`, iconURL: (`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
                    return interaction.reply({ embeds: [embed], ephemeral: true})
                  } 
                 const reasons = new MessageActionRow()
@@ -63,7 +63,7 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
                     parent: cat,
                     topic: `📨 Ticket for: ${interaction.user.tag} (${interaction.user.id})`
                 }).catch(() => {
-          interaction.editReply({ content: `**ساخت تیکت شما به مشکل خورد.**\n> *ErrCode: \`hHa_8\`*`, components: [reasons], ephemeral: true })
+          interaction.editReply({ content: `**ساخت تیکت شما به مشکل خورد.**\n> *Error: \`hHa_8\`*`, components: [reasons], ephemeral: true })
                 }).then(async function(channel) {
                   db.set(`Ticketopener_${channel.id}`, interaction.user);
                 await wait(1000)
@@ -76,9 +76,10 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
         .setThumbnail(interaction.guild.iconURL())
         const embed2 = new MessageEmbed()
         .setColor(client.config.color.main)
-        .setAuthor(`استف ها به زودی به درخواست شما رسیدگی میکنن.`, `https://cdn.discordapp.com/emojis/833101350623117342.gif?size=512`)
+        .setAuthor(`استف ها به زودی به درخواست شما رسیدگی میکنن.`, `https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)
         .setDescription(`> *لطفا صبر کنید تا یک استف با رول <@&${role}> تیکت شما رو اکسپت کند*`)
-        .setFooter(`ارور: ${interaction.guild.shardId}`, interaction.guild.iconURL())
+        .setImage(`https://cdn.discordapp.com/attachments/987778608401621002/1018206528169320569/20220910_213822.gif`)
+        .setFooter({text:`ارور: ${interaction.guild.shardId}`, iconURL:(`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
 
         const buttons = new MessageActionRow()
         .addComponents([,
@@ -90,7 +91,9 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
           new MessageButton()
           .setStyle(`LINK`)
           .setEmoji(`🔶`)
-          .setLabel(`Apokolips TM`)
+          .setLabel(`𝐊 Δ 𝐑 𝐌 Δ GIF`)
+          .setURL(`https://discord.gg/x6TZyyxaTq`)
+          .setLabel(`𝐊 Δ 𝐑 𝐌 Δ PORN`)
           .setURL(`https://discord.gg/x6TZyyxaTq`)
         ])
           const row = new MessageActionRow()
@@ -99,10 +102,10 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
 			      .setCustomId('tck_options')
 			      .setPlaceholder('برای انتخاب گزینه کلیک کنید')
 			      .addOptions([
-              { label: `ᴀᴘᴏᴋᴏʟɪᴘꜱ | ᴅᴇʟᴇᴛᴇ ᴛɪᴄᴋᴇᴛ`, description: `اگه کارتون تموم شده تیکت رو دیلیت کنید`, value: `delete_ticket${s}`, emoji: `🗑️`},
-              { label: `ᴀᴘᴏᴋᴏʟɪᴘꜱ | ʟᴏᴄᴋ ᴛɪᴄᴋᴇᴛ`, description: `تیکت برای یوسر معمولی هاید میشه`, value: `close_ticket${s}`, emoji: `🔒`},
-              { label: `ᴀᴘᴏᴋᴏʟɪᴘꜱ | ᴘɪɴ ᴛɪᴄᴋᴇᴛ`, description: `پین کردن تیکت های مهم`, value: `pin_ticket${s}`, emoji: `📌`},
-              { label: `ᴀᴘᴏᴋᴏʟɪᴘꜱ | ᴀᴄᴄᴇᴘᴛ ᴛɪᴄᴋᴇᴛ`, description: `تیکت برای شما اکسپت میشه`, value: `claim_ticket${s}`, emoji: `✅` },
+              { label: `ᴋᴀʀᴍᴀ | ᴅᴇʟᴇᴛᴇ ᴛɪᴄᴋᴇᴛ`, description: `اگه کارتون تموم شده تیکت رو دیلیت کنید`, value: `delete_ticket${s}`, emoji: `🗑️`},
+              { label: `ᴋᴀʀᴍᴀ | ʟᴏᴄᴋ ᴛɪᴄᴋᴇᴛ`, description: `تیکت برای یوسر معمولی هاید میشه`, value: `close_ticket${s}`, emoji: `🔒`},
+              { label: `ᴋᴀʀᴍᴀ | ᴘɪɴ ᴛɪᴄᴋᴇᴛ`, description: `پین کردن تیکت های مهم`, value: `pin_ticket${s}`, emoji: `📌`},
+              { label: `ᴋᴀʀᴍᴀ | ᴀᴄᴄᴇᴘᴛ ᴛɪᴄᴋᴇᴛ`, description: `تیکت برای شما اکسپت میشه`, value: `claim_ticket${s}`, emoji: `✅` },
               
             ]),
           ])
@@ -118,7 +121,7 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
         .setColor(client.config.color.red)
         .setTitle(`شما باید رول ادمین داشته باشید تا بتونید تیکت رو منیج کنید`)
         .setDescription(`***شما باید رول<@&${role}> داشته باشید تا بتونید این تیکت رو دیلیت کنید***`)
-        .setFooter(`Apokolips TM\nارور: ${interaction.guild.shardId}`, interaction.guild.iconURL())
+        .setFooter({text: `𝐊 Δ 𝐑 𝐌 Δ\nارور: ${interaction.guild.shardId}`, iconURL: (`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
                       if(!interaction.member.roles.cache.has(role)) {
                         return interaction.reply({ embeds: [norole], ephemeral: true})
                       }
@@ -138,7 +141,7 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
         .setColor(client.config.color.success)
         .setTitle(`تیکت قفل شد`)
         .setDescription(`**یوزر از تیکت حذف شد <@${require(`quick.db`).fetch(`Ticketopener_${interaction.channel.id}`).id}>**\n*این یوزر دیگه نمیتونه تیکت رو ببینه.*`)
-        .setFooter(`ارور: ${interaction.guild.shardId}`, interaction.guild.iconURL())
+        .setFooter({text: `ارور: ${interaction.guild.shardId}`, iconURL: (`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
 
         interaction.channel.send({ embeds: [embed] })
 
@@ -160,7 +163,7 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
          const alreadypinned = new MessageEmbed()
         .setColor(client.config.color.red)
         .setTitle(`این تیکت قبلا پین شده`)
-        .setFooter(`Apokolips TM\nارور: ${interaction.guild.shardId}`, interaction.guild.iconURL())
+        .setFooter({text: `𝐊 Δ 𝐑 𝐌 Δ\nارور: ${interaction.guild.shardId}`, iconURL: (`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
 
         if(pinned) return interaction.reply({ embeds: [alreadypinned], ephemeral: true})
         
@@ -169,7 +172,7 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
         .setColor(client.config.color.success)
         .setTitle(`📌 تیکت پین شد`)
         .setDescription(`> ***یوزر ${interaction.user} تیکت رو پین کرد ***`)
-        .setFooter(`خطا: ${interaction.guild.shardId}`, interaction.guild.iconURL())
+        .setFooter({text: `ارور: ${interaction.guild.shardId}`, iconURL: (`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
         db.set(`pinned_${interaction.channel.id}`, "pinned")
         interaction.channel.send({ embeds: [embed] })
         await interaction.deferUpdate({ ephemeral: false }).catch(() => {});
@@ -178,7 +181,7 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
         .setColor(client.config.color.red)
         .setTitle(`شما باید رول ادمین داشته باشید تا بتونید تیکت رو منیج کنید`)
         .setDescription(`***شما باید رول <@&${role}> داشته باشید تا بتونید این تیکت رو دیلیت کنید***`)
-        .setFooter(`Apokolips TM\nارور: ${interaction.guild.shardId}`, interaction.guild.iconURL())
+        .setFooter({text: `𝐊 Δ 𝐑 𝐌 Δ\nارور: ${interaction.guild.shardId}`, iconURL: (`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
                       if(!interaction.member.roles.cache.has(role)) {
                         return interaction.reply({ embeds: [norole], ephemeral: true})
                       }
@@ -191,7 +194,7 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
   .setLabel('دلیل دیلیت کردن تیکت رو وارد کنید')
   .setStyle('LONG')
   .setMinLength(1)
-  .setMaxLength(500)
+  .setMaxLength(1000)
   .setPlaceholder('دلیل رو اینجا وارد کنید')
   .setRequired(true)
 ]);
@@ -217,18 +220,18 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
         .setColor(client.config.color.red)
         .setTitle(`شما باید رول ادمین داشته باشید تا بتونید تیکت رو منیج کنید`)
         .setDescription(`***شما باید رول <@&${role}> داشته باشید تا بتونید این تیکت رو اکسپت کنید***`)
-        .setFooter(`Apokolips TM\nارور: ${interaction.guild.shardId}`, interaction.guild.iconURL())
+        .setFooter({text: `𝐊 Δ 𝐑 𝐌 Δ\nارور: ${interaction.guild.shardId}`, iconURL: (`https://media.discordapp.net/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
 
         const rolebutuser = new MessageEmbed()
         .setColor(client.config.color.red)
         .setTitle(`شما نمیونین تیکت خودتون رو اکسپت کنید`)
         .setDescription(`***شما رول <@&${role}> دارید ولی خودتون این تیکت رو باز کردید***`)
-        .setFooter(`Apokolips TM\nارور: ${interaction.guild.shardId}`, interaction.guild.iconURL())
+        .setFooter({text: `𝐊 Δ 𝐑 𝐌 Δ\nارور: ${interaction.guild.shardId}`, iconURL: (`https://media.discordapp.net/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
 
         const alreadyclaimed = new MessageEmbed()
         .setColor(client.config.color.red)
         .setTitle(`یکی زودتر از شما این تیکت رو اکسپت کرده`)
-        .setFooter(`Apokolips TM\nارور: ${interaction.guild.shardId}`, interaction.guild.iconURL())
+        .setFooter({text: `𝐊 Δ 𝐑 𝐌 Δ\nارور: ${interaction.guild.shardId}`, iconURL: (`https://media.discordapp.net/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
         
         if(!interaction.member.roles.cache.has(role)) {
                         return interaction.reply({ embeds: [norole], ephemeral: true})
@@ -238,13 +241,13 @@ if(!interaction.isButton() && !interaction.isSelectMenu()) return;
         const embed = new MessageEmbed()
         .setAuthor(`یوزر ${interaction.user.username} این تیکت رو اکسپت کرد`, interaction.user.displayAvatarURL())
         .setColor(client.config.color.main)
-        .setFooter(`Apokolips TM\nارور: ${interaction.guild.shardId}`, interaction.guild.iconURL())
+        .setFooter({text: `𝐊 Δ 𝐑 𝐌 Δ\nارور: ${interaction.guild.shardId}`, iconURL: (`https://media.discordapp.net/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
 
         const embed2 = new MessageEmbed()
         .setColor(client.config.color.main)
-        .setAuthor(`${interaction.user.tag} ᴀᴘᴏᴋᴏʟɪᴘꜱ ꜱᴛᴀꜰꜰ`, interaction.user.displayAvatarURL(), `https://discord.gg/x6TZyyxaTq`)
+        .setAuthor(`${interaction.user.tag} ᴋᴀʀᴍᴀ ꜱᴛᴀꜰꜰ`, interaction.user.displayAvatarURL(), `https://discord.gg/x6TZyyxaTq`)
         .setDescription(`> _**${interaction.user.username}** این تیکت رو اکسپت کرد._`)
-        .setFooter(`ارور: ${interaction.guild.shardId}`)
+        .setFooter({text: `ارور: ${interaction.guild.shardId}`, iconURL: (`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
 
         db.set(`claimed_${interaction.channel.id}`, "claimed")
         interaction.message.edit({ embeds: [interaction.message.embeds[0], embed2]})
