@@ -120,7 +120,7 @@ module.exports = {
       ])
       const embed = new MessageEmbed()
       .setColor(client.config.color.main)
-      .setTitle(`تیکت سیستم ست شد`)
+      .setTitle(`Ticket System set shod`)
         .setDescription(`
 \`\`\`diff
 -ticket system shoma set shod, baraye set kardan log ha az command /ticket-logs estefade konid.
@@ -129,20 +129,20 @@ module.exports = {
 'Ticket system set shod:' ${s}. Ticket-System
 \`\`\`
 \`\`\`bash
-'Ticket Channel set shode:' ${channel} (${channel.id})
+'Ticket Channel set shode:' channel id (${channel.id})
 \`\`\`
 \`\`\`bash
-'Ticket Category:' **${category || `_\` Ticket Category set nashode \`_`}
+'Ticket Category:' **${category || `_\ Ticket Category set nashode \_`}
 \`\`\`
 \`\`\`bash
-'Admin Role (Ticket Responder):' ${role} (${role.id}
+'Admin Role (Ticket Responder):' role id ${role.id}
+\`\`\`
+\`\`\`diff
+-esm channel haye ticket: agar shoma ticket channel sabet entekhab nakarde bashid bot be sorat khodkar user kasi ke ticket baz karde ro mizare
+baraye name channel (mesal: agar user sashazox ticket baz karde bashe name channel mishe ticket-sashazox)
 \`\`\`
 \`\`\`bash
-'esm channel haye ticket: agar shoma ticket channel sabet entekhab nakarde bashid bot be sorat khodkar user kasi ke ticket baz karde ro mizare
-baraye name channel (mesal: agar user sashazox ticket baz karde bashe name channel mishe ticket-sashazox)'
-\`\`\`
-\`\`\`bash
-+ Ticket Message (text roye panel embed): ${message || `Open a ticket for ${interaction.guild.name}`}
+'Ticket Message (text roye panel embed):' ${message || `Open a ticket for ${interaction.guild.name}`}
 \`\`\`
 \`\`\`bash
 'Ticket Message (text embed dakhel ticket baz shode):' ${msg.split("+n+").join("\n")}
