@@ -31,7 +31,7 @@ client.on('modalSubmit', async (modal) => {
     .addField(`**بسته شده توسط:**`, `\`\`\`\n${modal.user.tag} (${modal.user.id})\n\`\`\``)
     .addField(`**دلیل بستن تیکت:**`, `${Formatters.codeBlock('markdown', firstResponse) || "`دلیلی نوشته نشده`"}`)
     .setThumbnail(`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)
-    .setFooter({text: `بک آپ تیکت در فایل بالا قرار دارد.`, iconURL: (`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
+    .setFooter({text: `𝐊 Δ 𝐑 𝐌 Δ`, iconURL: (`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)})
         
 
     //tcopener.send({ embeds: [closed], files: [attachment]}).catch(() => {});
