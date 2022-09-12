@@ -13,7 +13,7 @@ module.exports = {
       .setDescription(`**𝐊 Δ 𝐑 𝐌 Δ https://discord.gg/x6TZyyxaTq**`)
       .setThumbnail(`https://media.discordapp.net/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)
       .setImage(`https://cdn.discordapp.com/attachments/987778608401621002/1018206528169320569/20220910_213822.gif`) 
-      .setFooter(`𝐊 Δ 𝐑 𝐌 Δ`) 
+      .setFooter({text:`𝐊 Δ 𝐑 𝐌 Δ`, iconURL: (`https://cdn.discordapp.com/attachments/987778608401621002/1018206529289195660/20220910_213653.gif`)}) 
 
       const row = new MessageActionRow()
 			.addComponents(
@@ -24,7 +24,7 @@ module.exports = {
         new MessageButton()
 				.setURL(`https://discord.gg/x6TZyyxaTq`)
 				.setLabel('𝐊 Δ 𝐑 𝐌 Δ PORN')
-				.setStyle('LINK'),
+				.setStyle('LINK')
 			);
       
       setTimeout(() => {
